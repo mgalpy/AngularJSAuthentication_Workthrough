@@ -86,14 +86,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_NOT_NEEDED_Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="_NOT_NEEDED_Global.asax.cs">
-      <DependentUpon>_NOT_NEEDED_Global.asax</DependentUpon>
-    </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
