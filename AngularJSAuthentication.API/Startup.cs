@@ -14,11 +14,16 @@ namespace AngularJSAuthentication.API
     {
         public void Configuration(IAppBuilder app)
         {
+            HttpConfiguration config = new HttpConfiguration();
+
             //Setup OAuth to return bearer token
             ConfigureOAuth(app);
-
-            HttpConfiguration config = new HttpConfiguration();
+            
             WebApiConfig.Register(config);
+
+            //Allow CORS for ASP.NET Web API
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
             app.UseWebApi(config);
         }
 
