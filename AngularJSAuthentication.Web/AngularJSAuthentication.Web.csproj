@@ -73,8 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\services\AuthService.js" />
+    <Content Include="app\views\login.html" />
     <Content Include="app\views\signup.html" />
     <Content Include="content\css\bootstrap.min.css" />
     <Content Include="content\css\font-awesome.min.css" />
