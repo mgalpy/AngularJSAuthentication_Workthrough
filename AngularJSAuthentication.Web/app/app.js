@@ -25,6 +25,11 @@ app.config(function ($routeProvider) {
     $routeProvider.otherwise({ redirectTo: "/home" });
 });
 
+app.config(function ($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+});
+
 app.run(['authService', function (authService) {
     authService.fillAuthData();
 }]);
+
